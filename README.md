@@ -1,5 +1,18 @@
 # _printf
 
+## Table of Content
+
+- [About](#about)
+- [Rules](#rules)
+- [Authorized Resoueces](#authorized-functions-and-macros)
+- [Capabilities](#capabilities-of-this-implementation)
+- [Usage](#usage)
+  - [Requirements](#requirements)
+  - [Samples](#samples)
+- [Authors](#authors)
+
+## About
+
 This project is a **custom implementation** of C's `printf` function to do formatted printing.
 It is entirely written in C and was done in fulfilment of the
 [ALX Software Engineering Programme](https://www.alxafrica.com/ "ALX SE")'s syllabus.
@@ -9,6 +22,8 @@ Syntax:
 ```C
 int _printf(const char *, ...);
 ```
+
+_________________________________________
 
 ## Rules
 
@@ -20,6 +35,8 @@ options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
 - All header files should be include-guarded
 - All files should end with a new line
 
+_________________________________________
+
 ## Authorized functions and macros
 
 - `write` (man 2 write)
@@ -29,6 +46,8 @@ options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
 - `va_end` (man 3 va_end)
 - `va_copy` (man 3 va_copy)
 - `va_arg` (man 3 va_arg)
+
+_________________________________________
 
 ## Capabilities of this implementation
 
@@ -52,6 +71,8 @@ the following custom conversion specifiers:
 - `S` prints a string, including the **ASCII code values** (in HEX) of non-printable characters
 - `r` prints a string in reverse.
 - `R` prints the [ROT-13](https://en.wikipedia.org/wiki/ROT13 "ROT-13") cypher of a string.
+
+_________________________________________
 
 ## Usage
 
@@ -162,6 +183,8 @@ the quick brown fox jumps over the lazy dog
 Reverse: god yzal eht revo spmuj xof nworb kciuq eht
 ROT-13 cypher: gur dhvpx oebja sbk whzcf bire gur ynml qbt
 ```
+
+_________________________________________
 
 ## Authors
 
