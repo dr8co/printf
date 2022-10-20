@@ -1,16 +1,5 @@
 # _printf
 
-## Table of Content
-
-- [About](#about)
-- [Rules](#rules)
-- [Authorized Resoueces](#authorized-functions-and-macros)
-- [Capabilities](#capabilities-of-this-implementation)
-- [Usage](#usage)
-  - [Requirements](#requirements)
-  - [Samples](#samples)
-- [Authors](#authors)
-
 ## About
 
 This project is a **custom implementation** of C's `printf` function to do formatted printing.
@@ -22,6 +11,19 @@ Syntax:
 ```C
 int _printf(const char *, ...);
 ```
+
+_________________________________________
+
+## Table of Content
+
+- [About](#about)
+- [Rules](#rules)
+- [Authorized Resoueces](#authorized-functions-and-macros)
+- [Capabilities](#capabilities-of-this-implementation)
+- [Usage](#usage)
+  - [Requirements](#requirements)
+  - [Samples](#samples)
+- [Authors](#authors)
 
 _________________________________________
 
