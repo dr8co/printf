@@ -15,7 +15,7 @@ int (*handle_specifiers(const char *format))(va_list)
 	f_specifiers sp[] = {
 			{"c", handle_c},
 			{"s", handle_s},
-			{"i", handle_i},
+			{"i", handle_d},
 			{"d", handle_d},
 			{"o", handle_oct},
 			{"x", handle_x},

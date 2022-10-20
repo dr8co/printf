@@ -20,33 +20,7 @@ int handle_d(va_list d)
 		num *= -1;
 		count += _puts("-");
 	}
-	
-	convert_bases(num, tmp, 10, 0);
-	count += _puts(tmp);
 
-	return (count);
-}
-
-
-/**
- * handle_i - prints integers
- *
- * @i: the number to be printed
- * Return: the count of digits printed.
- */
-int handle_i(va_list i)
-{
-	int num, count = 0;
-	char tmp[100];
-
-	num = va_arg(i, int);
-
-	if (num < 0)
-	{
-		num *= -1;
-		count += _puts("-");
-	}
-	
 	convert_bases(num, tmp, 10, 0);
 	count += _puts(tmp);
 

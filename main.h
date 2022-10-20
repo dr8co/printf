@@ -44,8 +44,6 @@ int handle_c(va_list c);
 
 int handle_s(va_list s);
 
-int handle_i(va_list i);
-
 int handle_d(va_list d);
 
 int handle_u(va_list u);
