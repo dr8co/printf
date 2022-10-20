@@ -6,7 +6,7 @@
 
 /**
  * struct specifiers - to format the character string according
- * to specifiers_
+ * to specifiers.
  *
  * @s: the format to print
  * @ptr: the pointer to the corresponding formatting function
