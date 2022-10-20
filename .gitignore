@@ -5,7 +5,10 @@ main.c
 *.exe
 *.out
 *.app
-?
+*?
 
 # object files
 *.o
+
+# scripts
+*.sh
