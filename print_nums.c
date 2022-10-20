@@ -59,7 +59,7 @@ int handle_b(va_list b)
 {
 	char tmp[100];
 
-	convert_bases(va_arg(b, int), tmp, 2, 0);
+	convert_bases(va_arg(b, unsigned int), tmp, 2, 0);
 
 	return (_puts(tmp));
 }
