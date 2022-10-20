@@ -11,7 +11,7 @@ int handle_x(va_list x)
 {
 	char tmp[100];
 
-	convert_bases(va_arg(x, unsigned int), tmp, 16, 0);
+	convert_bases(va_arg(x, unsigned long), tmp, 16, 0);
 
 	return (_puts(tmp));
 }
@@ -27,7 +27,7 @@ int handle_upper_x(va_list upper)
 {
 	char tmp[100];
 
-	convert_bases(va_arg(upper, unsigned int), tmp, 16, 1);
+	convert_bases(va_arg(upper, unsigned long), tmp, 16, 1);
 
 	return (_puts(tmp));
 }
@@ -44,7 +44,7 @@ int handle_p(va_list p)
 	char tmp[100];
 	int count = 0;
 
-	convert_bases(va_arg(p, unsigned long int), tmp, 16, 0);
+	convert_bases(va_arg(p, unsigned long), tmp, 16, 0);
 	count += _puts("0x");
 	count += _puts(tmp);
 

@@ -43,7 +43,7 @@ int handle_oct(va_list oct)
 {
 	char tmp[100];
 
-	convert_bases(va_arg(oct, unsigned int), tmp, 8, 0);
+	convert_bases(va_arg(oct, unsigned long), tmp, 8, 0);
 
 	return (_puts(tmp));
 }
@@ -59,7 +59,7 @@ int handle_b(va_list b)
 {
 	char tmp[100];
 
-	convert_bases(va_arg(b, unsigned int), tmp, 2, 0);
+	convert_bases(va_arg(b, unsigned long), tmp, 2, 0);
 
 	return (_puts(tmp));
 }
@@ -75,7 +75,7 @@ int handle_u(va_list u)
 {
 	char tmp[100];
 
-	convert_bases(va_arg(u, unsigned int), tmp, 10, 0);
+	convert_bases(va_arg(u, unsigned long), tmp, 10, 0);
 
 	return (_puts(tmp));
 }

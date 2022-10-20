@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * struct specifiers - to format the character string according

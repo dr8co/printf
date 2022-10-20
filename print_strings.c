@@ -10,6 +10,11 @@ int _puts(const char *str)
 {
 	int i;
 
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
 		_putchar(*(str + i));
@@ -27,7 +32,14 @@ int _puts(const char *str)
  */
 int handle_s(va_list s)
 {
-	return (_puts(va_arg(s, char *)));
+	char *str = va_arg(s, char *);
+
+	if (str == NULL)
+	{
+		return (_puts("(null))"));
+	}
+
+	return (_puts(str));
 }
 
 
@@ -46,6 +58,11 @@ int handle_ascii(va_list ascii)
 	char tmp[100];
 	int count = 0;
 	char *str = va_arg(ascii, char *);
+
+	if (str == NULL)
+	{
+		return (_puts("(null)"));
+	}
 
 	for (i = 0; *(str + i); i++)
 	{
@@ -83,6 +100,11 @@ int handle_r(va_list r)
 	char *str = va_arg(r, char *);
 	int i, count = 0;
 
+	if (str == NULL)
+	{
+		return (_puts("(null)"));
+	}
+
 	for (i = _strlen(str) - 1; i >= 0; i--)
 	{
 		count += _putchar(*(str + i));
@@ -102,6 +124,11 @@ int handle_rot13(va_list l)
 {
 	char tmp[1024];
 	char *str = va_arg(l, char *);
+
+	if (str == NULL)
+	{
+		return (_puts("(null)"));
+	}
 
 	_strcpy(tmp, str);
 
