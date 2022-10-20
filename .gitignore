@@ -7,8 +7,12 @@ main.c
 *.app
 *?
 
+
 # object files
 *.o
 
 # scripts
 *.sh
+
+# other files
+*.txt
