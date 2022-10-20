@@ -13,16 +13,11 @@
  *
  * Return: nothing.
  */
-void convert_bases(long i, char *tmp, int base, int upper)
+void convert_bases(unsigned long i, char *tmp, int base, int upper)
 {
-	int d, sign = 0;
+	int d;
 	char *str = tmp;
 
-	if (i < 0)
-	{
-		sign = 1;
-		i *= -1;
-	}
 	while (i)
 	{
 		d = i % base;
@@ -42,10 +37,6 @@ void convert_bases(long i, char *tmp, int base, int upper)
 		str++;
 	}
 
-	if (sign)
-	{
-		*str++ = '-';
-	}
 	*str = '\0';
 	reverse_string(tmp);
 }

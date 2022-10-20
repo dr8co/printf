@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 
 /**
@@ -9,11 +10,21 @@
  */
 int handle_d(va_list d)
 {
+	int num, count = 0;
 	char tmp[100];
 
-	convert_bases(va_arg(d, int), tmp, 10, 0);
+	num = va_arg(d, int);
 
-	return (_puts(tmp));
+	if (num < 0)
+	{
+		num *= -1;
+		count += _puts("-");
+	}
+	
+	convert_bases(num, tmp, 10, 0);
+	count += _puts(tmp);
+
+	return (count);
 }
 
 
@@ -25,11 +36,21 @@ int handle_d(va_list d)
  */
 int handle_i(va_list i)
 {
+	int num, count = 0;
 	char tmp[100];
 
-	convert_bases(va_arg(i, int), tmp, 10, 0);
+	num = va_arg(i, int);
 
-	return (_puts(tmp));
+	if (num < 0)
+	{
+		num *= -1;
+		count += _puts("-");
+	}
+	
+	convert_bases(num, tmp, 10, 0);
+	count += _puts(tmp);
+
+	return (count);
 }
 
 
