@@ -13,7 +13,7 @@
  *
  * Return: nothing.
  */
-void convert_bases(long int i, char *tmp, int base, int upper)
+void convert_bases(long i, char *tmp, int base, int upper)
 {
 	int d, sign = 0;
 	char *str = tmp;

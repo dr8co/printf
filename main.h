@@ -3,6 +3,8 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
+
 
 /**
  * struct specifiers - to format the character string according
