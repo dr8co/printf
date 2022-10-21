@@ -10,20 +10,34 @@
  */
 int handle_d(va_list d)
 {
-	int num, count = 0;
-	char tmp[100];
+	int tmp[10];
+	int j, m, n, sum, count;
 
-	num = va_arg(d, int);
-
-	if (num < 0)
+	n = va_arg(d, int);
+	count = 0;
+	m = 1000000000;
+	tmp[0] = n / m;
+	for (j = 1; j < 10; j++)
 	{
-		num *= -1;
-		count += _puts("-");
+		m /= 10;
+		tmp[j] = (n / m) % 10;
 	}
-
-	convert_bases(num, tmp, 10, 0);
-	count += _puts(tmp);
-
+	if (n < 0)
+	{
+		_putchar('-');
+		count++;
+		for (j = 0; j < 10; j++)
+			tmp[j] *= -1;
+	}
+	for (j = 0, sum = 0; j < 10; j++)
+	{
+		sum += tmp[j];
+		if (sum != 0 || j == 9)
+		{
+			_putchar('0' + tmp[j]);
+			count++;
+		}
+	}
 	return (count);
 }
 
