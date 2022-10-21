@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-
 
 /**
  * _printf - prints formatted strings

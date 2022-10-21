@@ -49,6 +49,7 @@ int handle_d(va_list d);
 int handle_oct(va_list oct);
 int handle_b(va_list b);
 int handle_u(va_list u);
+int num_length(long x);
 
 /* implemented in print_hex.c */
 int handle_x(va_list x);

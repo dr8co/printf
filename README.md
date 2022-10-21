@@ -91,7 +91,7 @@ The samples below illustrate the usage and compilation.
 
 ### Samples
 
-Below is a sample main file showcasing the various uses of `_printf`:
+Below is a sample main file showcasing `_printf` in action:
 
 ```C
 /* filename: main.c */

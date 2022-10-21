@@ -9,8 +9,8 @@
  */
 int handle_x(va_list x)
 {
-	char tmp[100];
-	int num = 0;
+	char *tmp;
+	int num, count = 0;
 
 	num = va_arg(x, unsigned int);
 
@@ -18,9 +18,13 @@ int handle_x(va_list x)
 	{
 		return (_puts("0"));
 	}
+	tmp = malloc(9);
 	convert_bases(num, tmp, 16, 0);
 
-	return (_puts(tmp));
+	count += _puts(tmp);
+	free(tmp);
+
+	return (count);
 }
 
 
@@ -32,8 +36,8 @@ int handle_x(va_list x)
  */
 int handle_upper_x(va_list upper)
 {
-	char tmp[100];
-	int num = 0;
+	char *tmp;
+	int num, count = 0;
 
 	num = va_arg(upper, unsigned int);
 
@@ -41,9 +45,13 @@ int handle_upper_x(va_list upper)
 	{
 		return (_puts("0"));
 	}
+	tmp = malloc(9);
 	convert_bases(num, tmp, 16, 1);
 
-	return (_puts(tmp));
+	count += _puts(tmp);
+
+	free(tmp);
+	return (count);
 }
 
 
@@ -55,9 +63,9 @@ int handle_upper_x(va_list upper)
  */
 int handle_p(va_list p)
 {
-	char tmp[100];
+	char *tmp;
 	int count = 0;
-	unsigned long num = 0;
+	unsigned long num;
 
 	num = va_arg(p, unsigned long);
 
@@ -66,9 +74,13 @@ int handle_p(va_list p)
 		return (_puts("(nil)"));
 	}
 
+	tmp = malloc(16);
+
 	convert_bases2(num, tmp, 16, 0);
 	count += _puts("0x");
 	count += _puts(tmp);
+
+	free(tmp);
 
 	return (count);
 }
