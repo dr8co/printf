@@ -10,34 +10,25 @@
  */
 int handle_d(va_list d)
 {
-	int tmp[10];
-	int j, m, n, sum, count;
+	int num, count = 0;
+	char tmp[100];
 
-	n = va_arg(d, int);
-	count = 0;
-	m = 1000000000;
-	tmp[0] = n / m;
-	for (j = 1; j < 10; j++)
+	num = va_arg(d, int);
+
+	if (num == 0)
 	{
-		m /= 10;
-		tmp[j] = (n / m) % 10;
+		return (_puts("0"));
 	}
-	if (n < 0)
+
+	if (num < 0)
 	{
-		_putchar('-');
-		count++;
-		for (j = 0; j < 10; j++)
-			tmp[j] *= -1;
+		num *= -1;
+		count += _puts("-");
 	}
-	for (j = 0, sum = 0; j < 10; j++)
-	{
-		sum += tmp[j];
-		if (sum != 0 || j == 9)
-		{
-			_putchar('0' + tmp[j]);
-			count++;
-		}
-	}
+
+	convert_bases(num, tmp, 10, 0);
+	count += _puts(tmp);
+
 	return (count);
 }
 
@@ -51,8 +42,15 @@ int handle_d(va_list d)
 int handle_oct(va_list oct)
 {
 	char tmp[100];
+	int num = 0;
 
-	convert_bases(va_arg(oct, unsigned int), tmp, 8, 0);
+	num = va_arg(oct, unsigned int);
+
+	if (num == 0)
+	{
+		return (_puts("0"));
+	}
+	convert_bases(num, tmp, 8, 0);
 
 	return (_puts(tmp));
 }
@@ -67,8 +65,15 @@ int handle_oct(va_list oct)
 int handle_b(va_list b)
 {
 	char tmp[100];
+	int num = 0;
 
-	convert_bases(va_arg(b, unsigned int), tmp, 2, 0);
+	num = va_arg(b, unsigned int);
+
+	if (num == 0)
+	{
+		return (_puts("0"));
+	}
+	convert_bases(num, tmp, 2, 0);
 
 	return (_puts(tmp));
 }
@@ -83,8 +88,15 @@ int handle_b(va_list b)
 int handle_u(va_list u)
 {
 	char tmp[100];
+	int num = 0;
 
-	convert_bases(va_arg(u, unsigned int), tmp, 10, 0);
+	num = va_arg(u, unsigned int);
+
+	if (num == 0)
+	{
+		return (_puts("0"));
+	}
+	convert_bases(num, tmp, 10, 0);
 
 	return (_puts(tmp));
 }

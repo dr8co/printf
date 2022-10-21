@@ -43,7 +43,7 @@ void convert_bases(unsigned int i, char *tmp, int base, int upper)
 
 
 /**
- * convert_bases - converts numbers from decimal to any base
+ * convert_bases2 - converts numbers from decimal (long) to any base
  *
  * @i: the number to convert
  * @tmp: the converted number as a string
