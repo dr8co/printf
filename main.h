@@ -36,7 +36,9 @@ char *reverse_string(char *str);
 
 char *_strcpy(char *dest, const char *src);
 
-void convert_bases(unsigned long i, char *tmp, int base, int upper);
+void convert_bases(unsigned int i, char *tmp, int base, int upper);
+
+void convert_bases2(unsigned long i, char *tmp, int base, int upper);
 
 char *rot13(char *str);
 

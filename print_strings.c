@@ -36,7 +36,7 @@ int handle_s(va_list s)
 
 	if (str == NULL)
 	{
-		return (_puts("(null))"));
+		return (_puts("(null)"));
 	}
 
 	return (_puts(str));
