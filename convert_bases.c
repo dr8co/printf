@@ -8,12 +8,12 @@
  * @tmp: the converted number as a string
  * @base: the base to convert the number to
  * @upper: switch for uppercase or lowercase digits
- * if upper = 1: for uppercase digits
- * if upper = 0: lowercase digits
+ * upper = 1: for uppercase digits
+ * upper = 0: lowercase digits
  *
  * Return: nothing.
  */
-void convert_bases(unsigned int i, char *tmp, int base, int upper)
+void convert_bases(unsigned long i, char *tmp, int base, int upper)
 {
 	int d;
 	char *str = tmp;
