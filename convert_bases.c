@@ -44,6 +44,8 @@ void convert_bases(unsigned int i, char *tmp, int base, int upper)
 
 /**
  * convert_bases2 - converts numbers from decimal (long) to any base
+ * this function handles larger integers compared to the one above.
+ * God, I wish C supported function overloading and default values :(
  *
  * @i: the number to convert
  * @tmp: the converted number as a string

@@ -18,7 +18,7 @@ _________________________________________
 
 - [About](#about)
 - [Rules](#rules)
-- [Authorized Resoueces](#authorized-functions-and-macros)
+- [Authorized Resources](#authorized-functions-and-macros)
 - [Capabilities](#capabilities-of-this-implementation)
 - [Usage](#usage)
   - [Requirements](#requirements)
@@ -53,7 +53,7 @@ _________________________________________
 
 ## Capabilities of this implementation
 
-The `_printf` function is capable of producing outputs according to the
+The `_printf` mimics `C's printf` to format outputs according to the
 following non-custom conversion specifiers:
 
 - `c` for characters
@@ -74,6 +74,8 @@ the following custom conversion specifiers:
 - `r` prints a string in reverse.
 - `R` prints the [ROT-13](https://en.wikipedia.org/wiki/ROT13 "ROT-13") cypher of a string.
 
+More features and capabilities to be added later.
+
 _________________________________________
 
 ## Usage
@@ -89,7 +91,7 @@ The samples below illustrate the usage and compilation.
 
 ### Samples
 
-Below is a sample main file showcasing the capabilities of `_printf`.
+Below is a sample main file showcasing the various uses of `_printf`:
 
 ```C
 /* filename: main.c */
@@ -192,4 +194,4 @@ _________________________________________
 
 [Ian Duncan](https://github.com/dr8co/ "Ian")
 
-[Esau Obuong](https://github.com/obuong/ ) 
+[Esau Obuong](https://github.com/obuong/)
