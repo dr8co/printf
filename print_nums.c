@@ -18,7 +18,7 @@ int handle_d(va_list d)
 		return (_puts("0"));
 	}
 
-	tmp = malloc(num_length(num) + 1);
+	tmp = malloc(num_length(num) + 2);
 
 	if (num < 0)
 	{
