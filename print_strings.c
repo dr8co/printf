@@ -55,18 +55,14 @@ int handle_s(va_list s)
 int handle_ascii(va_list ascii)
 {
 	unsigned int i;
-	char *tmp;
+	char tmp[100];
 	int count = 0;
-	char *str;
-
-	str = va_arg(ascii, char *);
+	char *str = va_arg(ascii, char *);
 
 	if (str == NULL)
 	{
 		return (_puts("(null)"));
 	}
-
-	tmp = malloc(3);
 
 	for (i = 0; *(str + i); i++)
 	{
@@ -89,8 +85,6 @@ int handle_ascii(va_list ascii)
 			count++;
 		}
 	}
-	free(tmp);
-
 	return (count);
 }
 
@@ -103,10 +97,8 @@ int handle_ascii(va_list ascii)
  */
 int handle_r(va_list r)
 {
-	char *str;
+	char *str = va_arg(r, char *);
 	int i, count = 0;
-
-	str = va_arg(r, char *);
 
 	if (str == NULL)
 	{
@@ -130,21 +122,15 @@ int handle_r(va_list r)
  */
 int handle_rot13(va_list l)
 {
-	char *tmp;
-	char *str;
-	int count;
-
-	str = va_arg(l, char *);
+	char tmp[1024];
+	char *str = va_arg(l, char *);
 
 	if (str == NULL)
 	{
 		return (_puts("(null)"));
 	}
-	tmp = malloc(_strlen(str) + 1);
 
 	_strcpy(tmp, str);
-	count = _puts(rot13(tmp));
-	free(tmp);
 
-	return (count);
+	return (_puts(rot13(tmp)));
 }
