@@ -69,8 +69,8 @@ following non-custom conversion specifiers:
 In addition to the above specifiers, `_printf` is also capable of handling
 the following custom conversion specifiers:
 
-- `b` converts an unsigned int to binary (and prints it)
-- `S` prints a string, including the **ASCII code values** (in HEX) of non-printable characters
+- `b` prints the binary of an unsigned int
+- `S` prints a string, including the **ASCII code values** (in HEX) of non-printable characters, prepended with `\x`.
 - `r` prints a string in reverse.
 - `R` prints the [ROT-13](https://en.wikipedia.org/wiki/ROT13 "ROT-13") cypher of a string.
 
