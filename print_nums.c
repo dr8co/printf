@@ -26,7 +26,7 @@ int handle_d(va_list d)
 		count += _puts("-");
 	}
 
-	convert_bases(num, tmp, 10, 0);
+    convert_bases(((unsigned int) num), tmp, 10, 0);
 	count += _puts(tmp);
 
 	return (count);
@@ -50,7 +50,7 @@ int handle_oct(va_list oct)
 	{
 		return (_puts("0"));
 	}
-	convert_bases(num, tmp, 8, 0);
+    convert_bases(((unsigned int) num), tmp, 8, 0);
 
 	return (_puts(tmp));
 }
@@ -73,7 +73,7 @@ int handle_b(va_list b)
 	{
 		return (_puts("0"));
 	}
-	convert_bases(num, tmp, 2, 0);
+    convert_bases(((unsigned int) num), tmp, 2, 0);
 
 	return (_puts(tmp));
 }
@@ -96,7 +96,7 @@ int handle_u(va_list u)
 	{
 		return (_puts("0"));
 	}
-	convert_bases(num, tmp, 10, 0);
+    convert_bases(((unsigned int) num), tmp, 10, 0);
 
 	return (_puts(tmp));
 }

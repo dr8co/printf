@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 
 /**
@@ -42,7 +43,6 @@ int handle_s(va_list s)
 	return (_puts(str));
 }
 
-
 /**
  * handle_ascii - prints a string, including non printable characters.
  * The non printable characters are printed this way: \x,
@@ -72,7 +72,7 @@ int handle_ascii(va_list ascii)
 			_putchar('x');
 
 			count += 2;
-			convert_bases(*(str + i), tmp, 16, 1);
+            convert_bases(((unsigned int) *(str + i)), tmp, 16, 1);
 
 			if (_strlen(tmp) < 2)
 				count += _putchar('0');
@@ -87,7 +87,6 @@ int handle_ascii(va_list ascii)
 	}
 	return (count);
 }
-
 
 /**
  * handle_r - prints a string in reverse.
@@ -112,7 +111,6 @@ int handle_r(va_list r)
 
 	return (count);
 }
-
 
 /**
  * handle_rot13 - prints a string encrypted by the ROT-13 cypher.

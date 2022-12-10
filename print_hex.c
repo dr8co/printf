@@ -18,7 +18,7 @@ int handle_x(va_list x)
 	{
 		return (_puts("0"));
 	}
-	convert_bases(num, tmp, 16, 0);
+    convert_bases(((unsigned int) num), tmp, 16, 0);
 
 	return (_puts(tmp));
 }
@@ -41,7 +41,7 @@ int handle_upper_x(va_list upper)
 	{
 		return (_puts("0"));
 	}
-	convert_bases(num, tmp, 16, 1);
+    convert_bases(((unsigned int) num), tmp, 16, 1);
 
 	return (_puts(tmp));
 }
@@ -66,7 +66,7 @@ int handle_p(va_list p)
 		return (_puts("(nil)"));
 	}
 
-	convert_bases2(num, tmp, 16, 0);
+    convert_bases(num, tmp, 16, 0);
 	count += _puts("0x");
 	count += _puts(tmp);
 
