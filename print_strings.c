@@ -72,7 +72,7 @@ int handle_ascii(va_list ascii)
 			_putchar('x');
 
 			count += 2;
-            convert_bases(((unsigned int) *(str + i)), tmp, 16, 1);
+			convert_bases(((unsigned int) *(str + i)), tmp, 16, 1);
 
 			if (_strlen(tmp) < 2)
 				count += _putchar('0');

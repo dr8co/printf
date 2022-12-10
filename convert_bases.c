@@ -32,7 +32,7 @@ void convert_bases(unsigned long num, char *tmp, int base, int upper)
 		{
 			*str = '0' + d;
 		}
-        num /= base;
+		num /= base;
 		str++;
 	}
 
