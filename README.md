@@ -3,8 +3,7 @@
 ## About
 
 This project is a **custom implementation** of C's `printf` function to do formatted printing.
-It is entirely written in C and was done in fulfilment of the
-[ALX Software Engineering Programme](https://www.alxafrica.com/ "ALX SE")'s syllabus.
+It is entirely written in C.
 
 Syntax:
 
